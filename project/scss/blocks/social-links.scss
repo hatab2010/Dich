@@ -1,0 +1,15 @@
+.social-links{
+  display: flex;
+  justify-content: center;
+
+  svg{
+    height: 20px;
+    padding: 13px;
+    fill: #333333;
+    cursor: pointer;
+
+    &:hover{
+      fill: #d03535;
+    }
+  }
+}

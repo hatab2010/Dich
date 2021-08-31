@@ -1,0 +1,22 @@
+.page{
+
+  &__content{
+    position: relative;
+    width: 100%;
+  }
+
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 35vh 1fr;
+  }
+  
+  @media (max-width: 1200px) {
+    &__content{
+
+    }
+
+    &__wrapper{
+      display: block;
+    }
+  }
+}
