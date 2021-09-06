@@ -9,3 +9,23 @@ body, h1 {
     font-weight: bold;
   }
 }
+
+.transition{
+  transition: all ease-in-out 0.4s;
+}
+
+.hide{
+  opacity: 0;
+}
+
+.color{
+  &--red{
+    color: #d03535;;
+  }
+}
+
+text{
+  &--uppercase{
+    text-transform: uppercase;
+  }
+}

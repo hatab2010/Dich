@@ -1,0 +1,366 @@
+.quiz{
+  transition: all ease-in-out 0.5s;
+
+  &__step{
+    transition: all ease-in-out 0.5s;
+    transform: translateY(-10%);
+    opacity: 0;
+
+    &--hide{
+      opacity: 0 !important;
+      margin-top: -50%;
+    }
+
+    &--show{
+      opacity: 1;
+      transform: translateY(0%);
+
+      .quiz__item{
+        opacity: 1;
+        transition: ease-in-out all 0.5s;
+        transform: translateY(0%);
+
+        &:nth-child(2){
+          transition-delay: 0.1s;
+        }
+
+        &:nth-child(3){
+          transition-delay: 0.2s;
+        }
+
+        &:nth-child(4){
+          transition-delay: 0.3s;
+        }
+
+        &:nth-child(5){
+          transition-delay: 0.4s;
+        }
+      }
+    }
+
+    &--delay{
+      &--disable{
+        .quiz__item{
+          transition-delay: 0s !important;
+        }
+      }
+    }
+  }
+
+  &__title{
+    font-size: 4vh;
+    margin: auto;
+  }
+
+  &__description{
+    font-size: 2vh;
+    margin: auto;
+    margin-top: 40px;
+    max-width: 500px;
+  }
+
+  &__item{
+    opacity: 0;
+    transform: translateY(-60%);
+    border: 1px solid #d03535;
+    max-width: 40vh;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 2vh;
+    height: 6.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover{
+      background-color: rgba(111, 111, 111, 0.09);
+      color: white;
+      box-shadow: 0px 0px 19px 4px rgba(255, 47, 47, 0.4);
+    }
+
+    &:active{
+      background-color: #d03535;
+    }
+
+    &--active{
+      background-color: #d03535;
+      font-weight: 800;
+      box-shadow: 0px 0px 19px 4px rgba(255, 47, 47, 0.4);
+    }
+
+    &--select{
+      opacity: 0 !important;
+      transform: translateY(-30%) !important;
+      background-color: #d03535 !important;
+    }
+  }
+
+  &__input{
+    background-color: initial;
+    border: 1px solid #d03535;
+    height: 50px;
+    color: white;
+    display: flex;
+    min-width: 50vh;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5vh;
+  }
+
+  &__button{
+    transition: all ease-in-out 0.2s;
+    margin: auto;
+    margin-top: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: #d03535;
+    border-radius: 50%;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+
+    &:hover{
+      transform: scale(1.2);
+    }
+
+    &--background{
+      &--blue{
+        background-color: #625ce8;
+      }
+
+      &--yellow{
+        background-color: #cb9950;
+      }
+    }
+
+    &--call{
+
+      img{
+        width: 30px;
+      }
+    }
+
+  }
+
+  &__call{
+    transition: all ease-in-out 0.5s;
+    display: none;
+    transform: translateY(10%);
+    opacity: 0;
+
+    img{
+      width: 30px;
+    }
+
+    &--show{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  &__input-wrapper{
+    position: relative;
+    opacity: 0;
+    margin-top: 30px;
+    transform: translateY(-20%);
+  }
+
+  &__form{
+    display: none;
+    transition: all ease-in-out 0.5s;
+    transform: translateY(10%);
+    opacity: 0;
+
+    &--show{
+      opacity: 1;
+      transform: translateY(0%);
+
+      & .quiz__input-wrapper{
+        opacity: 1;
+        transform: translateY(0);
+
+        &:nth-child(2){
+          transition-delay: 0s;
+        }
+
+
+        &:nth-child(3){
+          transition-delay: 0.1s;
+        }
+
+
+        &:nth-child(1){
+
+        }
+      }
+    }
+  }
+
+  &__label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.73);
+  }
+
+  &__input:focus{
+    background-color: rgba(255, 255, 255, 0.03);
+
+    & + label{
+      display: none;
+    }
+  }
+
+  &__input:valid{
+    & + label{
+      display: none;
+    }
+  }
+
+  &__final{
+    transition: all ease-in-out 0.5s;
+    display: none;
+    transform: translateY(-10%);
+    opacity: 0;
+
+    &--show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &--blue{
+    .quiz{
+      &__button{
+        background-color: #625ce8;
+      }
+
+      &__item{
+        border-color: #625ce8;
+
+        &:hover{
+          box-shadow: 0px 0px 19px 4px rgb(98, 92, 232);
+        }
+
+        &--select{
+          background-color: #625ce8 !important;
+        }
+
+        &:active{
+          background-color: #d03535 !important;
+        }
+      }
+
+      &__input{
+        border-color: #625ce8;
+      }
+    }
+  }
+
+  &--yellow{
+    .quiz{
+      &__button{
+        background-color: #cb9950;
+      }
+
+      &__item{
+        border-color: #cb9950;
+
+        &:hover{
+          box-shadow: 0px 0px 19px 4px rgb(203, 153, 80);
+        }
+
+        &--select{
+          background-color: #cb9950 !important;
+        }
+      }
+
+      &__input{
+        border-color: #cb9950;
+      }
+    }
+  }
+  
+  @media (max-width: 1200px) {
+
+
+    .quiz__description{
+      max-width: 70vw;
+      font-size: 14px;
+      margin-top: 15px;
+      max-width: 250px;
+    }
+
+    &__title{
+      font-size: 18px;
+    }
+
+    &__button{
+      margin-top: 20px;
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+
+      img{
+        width: 20px;
+      }
+    }
+
+    &__item-list{
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    &__item-list.vertical{
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      justify-content: space-between;
+
+      .quiz__item{
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
+    &__item{
+
+      font-size: 14px;
+      padding: 10px;
+      width: 300px;
+      margin: auto;
+    }
+
+    &__input-wrapper{
+      margin-top: 15px;
+    }
+
+    &__input{
+      width: 100%;
+      min-width: initial;
+      font-size: 14px;
+      height: 40px;
+      max-width: 250px;
+
+      &+label{
+        font-size: 12px;
+      }
+    }
+  }
+}

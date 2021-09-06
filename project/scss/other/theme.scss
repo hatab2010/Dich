@@ -1,0 +1,112 @@
+.theme{
+
+  &--blue{
+    .feedback{
+      &__title{
+        color: #625ce8;
+      }
+
+      &__button{
+        &--active{
+          background-color: #625ce8;
+        }
+      }
+    }
+
+    .social-links{
+      svg{
+        &:hover{
+          fill: #625ce8;
+        }
+      }
+    }
+  }
+
+  &--yellow{
+    .feedback{
+      &__title{
+        color: #cb9950
+      }
+
+      &__button{
+        &--active{
+          background-color: #cb9950
+        }
+      }
+    }
+
+    .social-links{
+      svg{
+        &:hover{
+          fill: #cb9950
+        }
+      }
+    }
+  }
+
+  &--green{
+    .feedback{
+      &__title{
+        color: #23a783;
+      }
+
+      &__button{
+        &--active{
+          background-color: #23a783;
+        }
+      }
+    }
+
+    .social-links{
+      svg{
+        &:hover{
+          fill: #23a783;
+        }
+      }
+    }
+  }
+
+  &--white{
+    .feedback{
+      &__title{
+        color: #ffffff;
+      }
+
+      &__button{
+        &--active{
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    .social-links{
+      svg{
+        &:hover{
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+
+  &--purple{
+    .feedback{
+      &__title{
+        color: #b016dc;
+      }
+
+      &__button{
+        &--active{
+          background-color: #b016dc;
+        }
+      }
+    }
+
+    .social-links{
+      svg{
+        &:hover{
+          fill: 3
+        }
+      }
+    }
+  }
+}

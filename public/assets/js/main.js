@@ -61,75 +61,99 @@ $(window).resize(function(){
     height = $("body").height();
 })
 
-$(window).on("mousemove", function (e){
-
-    //_yRotation = (e.offsetY - center;
-
-})
-
 function transformRotation(){
 
     //perspective(2000px) rotatey(0deg) rotatex(0deg);
 }
 
-(function() {
-    var mousePos;
+// (function() {
+//     var mousePos;
+//
+//     document.onmousemove = handleMouseMove;
+//     setInterval(getMousePosition, 40); // setInterval repeats every X ms
+//
+//     function handleMouseMove(event) {
+//         var dot, eventDoc, doc, body, pageX, pageY;
+//
+//         event = event || window.event; // IE-ism
+//
+//         // If pageX/Y aren't available and clientX/Y are,
+//         // calculate pageX/Y - logic taken from jQuery.
+//         // (This is to support old IE)
+//         if (event.pageX == null && event.clientX != null) {
+//             eventDoc = (event.target && event.target.ownerDocument) || document;
+//             doc = eventDoc.documentElement;
+//             body = eventDoc.body;
+//
+//             event.pageX = event.clientX +
+//                 (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+//                 (doc && doc.clientLeft || body && body.clientLeft || 0);
+//             event.pageY = event.clientY +
+//                 (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+//                 (doc && doc.clientTop  || body && body.clientTop  || 0 );
+//         }
+//
+//         mousePos = {
+//             x: event.pageX,
+//             y: event.pageY
+//         };
+//     }
+//     function getMousePosition() {
+//         var pos = mousePos;
+//         if (!pos) {
+//             // We haven't seen any movement yet
+//         }
+//         else {
+//
+//             if (window.matchMedia("(max-width: 1200px)").matches) {
+//                 $(".slider__content--transported").removeAttr("style");
+//             } else {
+//                 const MAX_ROTATION = 10;
+//                 let _xRotation;
+//                 let _yRotation;
+//
+//                 let centerWidth = width/2;
+//                 let centerHeight = height/2;
+//
+//                 _xRotation = (pos.x - centerWidth)/centerWidth * MAX_ROTATION;
+//                 _yRotation = -(pos.y - centerHeight)/centerHeight * MAX_ROTATION;
+//
+//                 $(".slider__content--transported").css(
+//                     "transform", "perspective(700px) " +
+//                     "rotatey("+_xRotation+"deg) " +
+//                     "rotatex("+_yRotation+"deg)" +
+//                     "translateX("+(-_xRotation)/3+"%)" +
+//                     "translateY("+(_yRotation)/3+"%)"
+//                 );
+//             }
+//
+//
+//         }
+//     }
+// })();
 
-    document.onmousemove = handleMouseMove;
-    setInterval(getMousePosition, 40); // setInterval repeats every X ms
+let prevTheme = null;
+$(".menu__item").on("click", function(){
+    let color = $(this).attr("data-color");
+    let themeClass = "theme--"+color;
 
-    function handleMouseMove(event) {
-        var dot, eventDoc, doc, body, pageX, pageY;
-
-        event = event || window.event; // IE-ism
-
-        // If pageX/Y aren't available and clientX/Y are,
-        // calculate pageX/Y - logic taken from jQuery.
-        // (This is to support old IE)
-        if (event.pageX == null && event.clientX != null) {
-            eventDoc = (event.target && event.target.ownerDocument) || document;
-            doc = eventDoc.documentElement;
-            body = eventDoc.body;
-
-            event.pageX = event.clientX +
-                (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-                (doc && doc.clientLeft || body && body.clientLeft || 0);
-            event.pageY = event.clientY +
-                (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
-                (doc && doc.clientTop  || body && body.clientTop  || 0 );
-        }
-
-        mousePos = {
-            x: event.pageX,
-            y: event.pageY
-        };
+    if (prevTheme !== null){
+        $(".menu").removeClass(prevTheme);
     }
-    function getMousePosition() {
-        var pos = mousePos;
-        if (!pos) {
-            // We haven't seen any movement yet
-        }
-        else {
 
-            const MAX_ROTATION = 10;
-            let _xRotation;
-            let _yRotation;
+    prevTheme = themeClass;
+    $(".menu").addClass(themeClass);
+})
 
-            let centerWidth = width/2;
-            let centerHeight = height/2;
 
-            _xRotation = (pos.x - centerWidth)/centerWidth * MAX_ROTATION;
-            _yRotation = -(pos.y - centerHeight)/centerHeight * MAX_ROTATION;
+$(".asd").on("click", function(){
+    let color = $(this).attr("data-color");
+    let themeClass = "theme--"+color;
 
-            $(".slider__content").css(
-                "transform", "perspective(700px) " +
-                             "rotatey("+_xRotation+"deg) " +
-                             "rotatex("+_yRotation+"deg)" +
-                             "translateX("+(-_xRotation)/3+"%)" +
-                             "translateY("+(_yRotation)/3+"%)"
-            );
-        }
+    if (prevTheme !== null){
+        $(".menu").removeClass(prevTheme);
     }
-})();
 
-//quiz
+    prevTheme = themeClass;
+    $(".menu").addClass(themeClass);
+})

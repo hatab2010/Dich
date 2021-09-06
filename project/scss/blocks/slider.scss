@@ -5,6 +5,7 @@
   overflow: hidden;
 
   &__wrapper{
+
   }
 
   &__item{
@@ -34,6 +35,13 @@
     margin: auto;
     text-align: center;
     width: 70%;
+
+    &--full{
+      width: 100%;
+      height: 100%;
+      max-width: initial;
+      box-sizing: border-box;
+    }
   }
 
   &__pattern{
@@ -52,31 +60,6 @@
     margin: 30px auto 0px auto;
   }
 
-  &__button{
-    margin: auto;
-    margin-top: 30px;
-    width: 80px;
-    height: 80px;
-    background-color: #d03535;
-    border-radius: 50%;
-    line-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    cursor: pointer;
-
-    &--background{
-      &--blue{
-        background-color: #625ce8;
-      }
-
-      &--yellow{
-        background-color: #cb9950;
-      }
-    }
-  }
-
   &__title{
     width: 70vh;
     margin: auto;
@@ -85,11 +68,47 @@
     font-weight: 500;
     text-transform: uppercase;
   }
-  
+
   @media (min-height: 1000px) {
     &__title{
       font-size: 54px;
     }
   }
+  
+  @media (max-width: 1200px) {
+    &__title{
+      font-size: 24px;
+      margin-left: auto;
+      margin-right: auto;
+      width: initial;
+      max-width: 400px;
+    }
+
+    &__description{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      max-width: 70vw;
+      font-size: 14px;
+    }
+
+    &__pattern{
+
+      &--s01{
+        width: 210vw !important;
+        max-height: 240vh;
+      }
+      &--s02{
+        width: 180vw !important;
+        max-height: 210vh;
+      }
+      &--s03{
+        width: 150vw !important;
+        max-height: 200vh;
+      }
+    }
+  }
+
+
 }
 
