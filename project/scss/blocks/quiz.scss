@@ -1,5 +1,22 @@
 .quiz{
   transition: all ease-in-out 0.5s;
+  max-width: 670px;
+  position: relative;
+  margin: auto;
+
+  &--col2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  &--col1{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__step{
     transition: all ease-in-out 0.5s;
@@ -59,73 +76,125 @@
     max-width: 500px;
   }
 
-  &__item{
-    opacity: 0;
-    transform: translateY(-60%);
-    border: 1px solid #d03535;
-    max-width: 40vh;
+  &__item-list{
+    width: 80%;
     margin: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    font-size: 2vh;
-    height: 6.5vh;
+  }
+
+  &__item{
+    display: none;
+  }
+
+  &__answers-wrapper{
+    margin-top: 15px;
+  }
+
+  &__wrapper{
+    max-width: 800px;
+  }
+
+  &__answer{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    border: 1px solid #d03535;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 12px;
+    height: 40px;
     cursor: pointer;
+    max-width: 400px;
 
     &:hover{
-      background-color: rgba(111, 111, 111, 0.09);
-      color: white;
-      box-shadow: 0px 0px 19px 4px rgba(255, 47, 47, 0.4);
-    }
-
-    &:active{
-      background-color: #d03535;
-    }
-
-    &--active{
-      background-color: #d03535;
-      font-weight: 800;
-      box-shadow: 0px 0px 19px 4px rgba(255, 47, 47, 0.4);
+      background-color: rgba(255, 255, 255, 0.07);
+      box-shadow: 0px 0px 16px 4px rgb(208, 53, 53);
     }
 
     &--select{
-      opacity: 0 !important;
-      transform: translateY(-30%) !important;
       background-color: #d03535 !important;
+      font-weight: 800;
     }
+  }
+
+  &__navigation{
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    background-color: #d03535;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--next{
+      right: -35px;
+    }
+
+    &--prev{
+      left: -35px;
+    }
+
+    &:hover{
+      transform: scale(1.2) translateY(-50%);
+    }
+
+    &--disable{
+      background-color: #6f6f6f;
+
+      &:hover{
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__navigation-wrapper{
+    display: none;
+    right: 0;
+    margin: auto;
+    max-width: 780px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: -1;
   }
 
   &__input{
     background-color: initial;
     border: 1px solid #d03535;
-    height: 50px;
+    height: 35px;
     color: white;
     display: flex;
-    min-width: 50vh;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 15px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2.5vh;
+    font-size: 12px;
+    width: 300px;
   }
 
   &__button{
     transition: all ease-in-out 0.2s;
     margin: auto;
-    margin-top: 30px;
-    width: 80px;
-    height: 80px;
+    margin-top: 40px;
+    width: 60px;
+    height: 60px;
     background-color: #d03535;
     border-radius: 50%;
-    line-height: 50px;
+    line-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
 
     &:hover{
@@ -143,42 +212,29 @@
     }
 
     &--call{
+      margin-top: 15px;
+      width: 45px;
+      height: 45px;
 
       img{
-        width: 30px;
+        width: 20px;
       }
     }
-
   }
 
   &__call{
-    transition: all ease-in-out 0.5s;
     display: none;
-    transform: translateY(10%);
-    opacity: 0;
-
-    img{
-      width: 30px;
-    }
-
-    &--show{
-      opacity: 1;
-      transform: translateY(0%);
-    }
+    transition: all ease-in-out 0.5s;
+    font-size: 15px;
   }
 
   &__input-wrapper{
     position: relative;
-    opacity: 0;
-    margin-top: 30px;
-    transform: translateY(-20%);
   }
 
   &__form{
     display: none;
     transition: all ease-in-out 0.5s;
-    transform: translateY(10%);
-    opacity: 0;
 
     &--show{
       opacity: 1;
@@ -210,9 +266,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5vh;
+    font-size: 1vh;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.73);
+    z-index: -1;
   }
 
   &__input:focus{
@@ -232,13 +289,6 @@
   &__final{
     transition: all ease-in-out 0.5s;
     display: none;
-    transform: translateY(-10%);
-    opacity: 0;
-
-    &--show{
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   &--blue{
@@ -247,7 +297,7 @@
         background-color: #625ce8;
       }
 
-      &__item{
+      &__answer{
         border-color: #625ce8;
 
         &:hover{
@@ -257,14 +307,14 @@
         &--select{
           background-color: #625ce8 !important;
         }
-
-        &:active{
-          background-color: #d03535 !important;
-        }
       }
 
       &__input{
         border-color: #625ce8;
+      }
+
+      &__navigation{
+        background-color: #625ce8;
       }
     }
   }
@@ -275,7 +325,7 @@
         background-color: #cb9950;
       }
 
-      &__item{
+      &__answer{
         border-color: #cb9950;
 
         &:hover{
@@ -290,12 +340,14 @@
       &__input{
         border-color: #cb9950;
       }
+
+      &__navigation{
+        background-color: #cb9950;
+      }
     }
   }
   
   @media (max-width: 1200px) {
-
-
     .quiz__description{
       max-width: 70vw;
       font-size: 14px;
@@ -318,14 +370,6 @@
       }
     }
 
-    &__item-list{
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: auto auto;
-      gap: 15px;
-      justify-content: center;
-    }
-
     &__item-list.vertical{
       margin-top: 20px;
       display: grid;
@@ -339,20 +383,12 @@
       }
     }
 
-    &__item{
-
-      font-size: 14px;
-      padding: 10px;
-      width: 300px;
-      margin: auto;
-    }
-
     &__input-wrapper{
       margin-top: 15px;
     }
 
     &__input{
-      width: 100%;
+      width: 200px;
       min-width: initial;
       font-size: 14px;
       height: 40px;
@@ -361,6 +397,12 @@
       &+label{
         font-size: 12px;
       }
+    }
+  }
+  
+  @media (max-width: 400px) {
+    &--col2{
+      grid-template-columns: 1fr;
     }
   }
 }

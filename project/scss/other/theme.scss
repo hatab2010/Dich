@@ -20,6 +20,12 @@
         }
       }
     }
+
+    .menu__logo{
+      svg{
+        fill:  #625ce8;
+      }
+    }
   }
 
   &--yellow{
@@ -40,6 +46,12 @@
         &:hover{
           fill: #cb9950
         }
+      }
+    }
+
+    .menu__logo{
+      svg{
+        fill: #cb9950
       }
     }
   }
@@ -64,6 +76,12 @@
         }
       }
     }
+
+    .menu__logo{
+      svg{
+        fill: #23a783;
+      }
+    }
   }
 
   &--white{
@@ -86,6 +104,12 @@
         }
       }
     }
+
+    .menu__logo{
+      svg{
+        fill: #ffffff;
+      }
+    }
   }
 
   &--purple{
@@ -101,11 +125,9 @@
       }
     }
 
-    .social-links{
+    .menu__logo{
       svg{
-        &:hover{
-          fill: 3
-        }
+        fill: #b016dc;
       }
     }
   }

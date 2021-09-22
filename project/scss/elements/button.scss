@@ -1,0 +1,47 @@
+.button{
+  transition: all ease-in-out 0.2s;
+  margin: auto;
+  margin-top: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #d03535;
+  border-radius: 50%;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+
+  img{
+    width: 25px;
+  }
+
+  &:hover{
+    transform: scale(1.2);
+  }
+
+  &--background{
+    &--blue{
+      background-color: #625ce8;
+    }
+
+    &--yellow{
+      background-color: #cb9950;
+    }
+
+    &--green{
+      background-color: #23a783;
+    }
+  }
+
+  &--call{
+    margin-top: 15px;
+    width: 45px;
+    height: 45px;
+
+    img{
+      width: 20px;
+    }
+  }
+}

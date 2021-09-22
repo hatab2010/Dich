@@ -42,8 +42,8 @@
     justify-content: left;
     align-items: center;
     cursor: pointer;
-    height: 7vh;
-    font-size: 1.3vh;
+    height: 10vh;
+    font-size: 1.4vh;
     color: #999999;
     position: relative;
     border-top: 1px solid #333333;
@@ -56,8 +56,8 @@
       position: absolute;
       content: " ";
       right: 30px;
-      width: 12px;
-      height: 12px;
+      width: 9px;
+      height: 9px;
       transform: translateY(-50%);
       border-radius: 50%;
       top: 50%;
@@ -76,7 +76,7 @@
     &--active{
       position: relative;
       color: white !important;
-      font-size: 1.2vh;
+      font-size: 1.7vh;
 
       .menu__arrow{
         display: block;
@@ -224,16 +224,16 @@
     transition: all ease-in-out 0.4s;
     width: 250px;
 
+    .menu__arrow{
+      display: none;
+    }
+
     &__toggle{
       display: block;
     }
 
     &__main{
       overflow-x: auto;
-
-      svg{
-        display: none !important;
-      }
     }
 
     &--show{

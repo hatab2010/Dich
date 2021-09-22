@@ -4,6 +4,11 @@ body, h1 {
   font-family: "GOTHAMPRO";
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 .font{
   &--bold{
     font-weight: bold;
@@ -20,7 +25,15 @@ body, h1 {
 
 .color{
   &--red{
-    color: #d03535;;
+    color: #d03535;
+  }
+
+  &--green{
+    color: #23a783;
+  }
+
+  &--blue{
+    color: #625ce8;
   }
 }
 

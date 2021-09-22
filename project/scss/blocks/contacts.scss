@@ -15,13 +15,6 @@
     gap: 40px;
   }
 
-  &__item{
-    &:hover{
-      background-color: white;
-      cursor: pointer;
-    }
-  }
-
   &__image{
     display: inline-block;
     padding: 15px;
@@ -32,6 +25,27 @@
 
     img{
       width: 100%;
+
+      &:nth-child(2){
+        display: none;
+      }
+    }
+  }
+
+  &__item{
+    &:hover{
+      background-color: white;
+      cursor: pointer;
+
+      img{
+        &:first-child{
+          display: none;
+        }
+
+        &:nth-child(2){
+          display: block;
+        }
+      }
     }
   }
   

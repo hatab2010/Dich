@@ -5,6 +5,17 @@
   overflow: auto;
   box-sizing: border-box;
 
+  &__b{
+    display: flex;
+    align-items: center;
+
+    img{
+      display: block;
+      width: 40px;
+      margin-left: 20px;
+    }
+  }
+
   &__item-list{
     max-width: 1000px;
     margin: auto;
@@ -64,19 +75,10 @@
   &__tag{
     display: inline-block;
 
-    &:after{
+    &:before{
       display: inline-block;
-      margin-left: 7px;
-      content: " ";
-      height: 10px;
-      width: 1px;
-      background-color: white;
-    }
-
-    &:last-child{
-      &:after{
-        display: none;
-      }
+      content: "#";
+      margin-left: 0;
     }
   }
 
