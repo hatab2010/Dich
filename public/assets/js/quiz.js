@@ -61,7 +61,10 @@ function Quiz(el){
         }
 
         if (!isSelect && !isMultiple){
-            next();
+            select.addClass("quiz__answer--select");
+            setTimeout(function(){
+                next();
+            }, 100)
         }
 
         setNextButtonState();

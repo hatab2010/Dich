@@ -1,4 +1,39 @@
 .theme{
+  &--black{
+    .menu__logo{
+      svg{
+        fill: #000000;
+      }
+    }
+  }
+
+  &--red{
+    .feedback{
+      &__title{
+        color: #d03535;
+      }
+
+      &__button{
+        &--active{
+          background-color: #d03535;
+        }
+      }
+    }
+
+    .social-links{
+      svg{
+        &:hover{
+          fill: #d03535;
+        }
+      }
+    }
+
+    .menu__logo{
+      svg{
+        fill:  #d03535;
+      }
+    }
+  }
 
   &--blue{
     .feedback{
@@ -24,6 +59,22 @@
     .menu__logo{
       svg{
         fill:  #625ce8;
+      }
+    }
+  }
+
+  &--sea{
+    .menu__logo{
+      svg{
+        fill:  #429eeb;
+      }
+    }
+  }
+
+  &--white{
+    .menu__logo{
+      svg{
+        fill: #ffffff;
       }
     }
   }

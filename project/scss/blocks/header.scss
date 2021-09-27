@@ -23,14 +23,19 @@
     position: relative;
 
     &--oversize{
-      transform: scale(1.4);
+      max-width: initial;
+      width: 170%;
+      margin-left: -35%;
       
-      @media (max-width: 800px) {
-        transform: scale(1.2);
+      @media (max-width: 1000px) {
+        width: 100%;
+        margin-left: initial;
       }
     }
 
     &--line{
+      padding: 20px 0 20px 0;
+
       &:before{
         box-sizing: border-box;
         content: " ";
@@ -39,6 +44,8 @@
         background-color: rgba(0, 0, 0, 0.29);
         position: absolute;
         left: -100vw;
+        top: 50%;
+        transform: translateY(-50%);
         right: 0;
         margin: auto;
         z-index: -1;
@@ -50,9 +57,8 @@
     box-sizing: border-box;
     padding: 40px;
     position: relative;
-    width: 55%;
     min-width: 380px;
-    max-width: 900px;
+    max-width: 670px;
 
     &--black{
 

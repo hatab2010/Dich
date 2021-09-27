@@ -26,10 +26,23 @@
             <b class="bottom"></b>
         </div>
         <div class="menu__main">
-            <div class="menu__logo">
-                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 779.21 185.87" fill="#d03535" xml:space="preserve">
+            <div class="menu__item-list">
+                <div class="menu__item menu__item--active" data-color="black">
+                    <svg
+                            class="menu__arrow"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            fill="#fff"
+                            height="100%"
+                            viewBox="0.3 0 23 78">
+                        <path fill-rule="evenodd"
+                              d="M22.846,39.821 L0.311,78.988 L0.311,0.653 L22.846,39.821 Z"/>
+                    </svg>
+                    </svg>
+                    <div class="menu__logo">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 779.21 185.87" fill="#000000" xml:space="preserve">
                         <g>
 	<path d="M345.32,62.22c5.63,0.19,11.28,0.09,16.88,0.62c10.18,0.96,18.96,4.92,25.41,13.17c3.85,4.92,5.85,10.57,6.39,16.74
 		c0.64,7.26-0.24,14.27-3.89,20.71c-5.1,9.01-12.98,14.27-22.96,16.6c-4.07,0.95-8.2,1.28-12.37,1.27c-7.99-0.01-15.99,0-23.98,0
@@ -94,21 +107,9 @@
 		C73.41,87.66,74.37,88.6,74.36,89.99z"/>
 </g>
                 </svg>
-            </div>
-            <div class="menu__item-list">
-                <!--                <div class="menu__item menu__item&#45;&#45;active" data-color="red">-->
-                <!--                    <svg-->
-                <!--                            class="menu__arrow"-->
-                <!--                            xmlns="http://www.w3.org/2000/svg"-->
-                <!--                            xmlns:xlink="http://www.w3.org/1999/xlink"-->
-                <!--                            height="100%" viewBox="0.3 0 23 78">-->
-                <!--                        <path fill-rule="evenodd"-->
-                <!--                              d="M22.846,39.821 L0.311,78.988 L0.311,0.653 L22.846,39.821 Z"/>-->
-                <!--                    </svg>-->
-
-                <!--                </svg>-->
-                <!--                </div>-->
-                <div class="menu__item menu__item--active" data-color="red">
+                    </div>
+                </div>
+                <div class="menu__item" data-color="red">
                     <svg
                             class="menu__arrow"
                             xmlns="http://www.w3.org/2000/svg"
@@ -152,8 +153,7 @@
                     </svg>
                     Портфолио
                 </div>
-                <!--                <div class="menu__item">Расчитать стоимость</div>-->
-                <div class="menu__item" data-color="white">
+                <div class="menu__item" data-color="sea">
                     <svg
                             class="menu__arrow"
                             xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +164,7 @@
                     </svg>
                     Контакты
                 </div>
-                <div class="menu__item" data-color="purple">
+                <div class="menu__item" data-color="white">
                     <svg
                             class="menu__arrow"
                             xmlns="http://www.w3.org/2000/svg"
@@ -252,100 +252,100 @@
 
             </div>
             <!-- SLIDE_MAIN -->
-            <!--            <div class="slider__item">-->
-            <!--                <div class="slider__content slider__content&#45;&#45;full">-->
-            <!--                    <div class="header">-->
-            <!--                        <div class="header__wrapper">-->
-            <!--                            <svg-->
-            <!--                                    class="pattern"-->
-            <!--                                    xmlns="http://www.w3.org/2000/svg"-->
-            <!--                                    xmlns:xlink="http://www.w3.org/1999/xlink"-->
-            <!--                                    viewBox="0 0 345 345">-->
-            <!--                                <defs>-->
-            <!--                                    <filter id="Filter_header" x="-1.5px" y="-1.5px" width="295px"-->
-            <!--                                            height="295px">-->
-            <!--                                        <feOffset in="SourceAlpha" dx="0" dy="0"/>-->
-            <!--                                        <feGaussianBlur result="blurOut" stdDeviation="3"/>-->
-            <!--                                        <feFlood flood-color="rgb(35, 167, 131)" result="floodOut"/>-->
-            <!--                                        <feComposite operator="atop" in="floodOut" in2="blurOut"/>-->
-            <!--                                        <feComponentTransfer>-->
-            <!--                                            <feFuncA class="intensity" type="linear" slope="3"/>-->
-            <!--                                        </feComponentTransfer>-->
-            <!--                                        <feMerge>-->
-            <!--                                            <feMergeNode/>-->
-            <!--                                            <feMergeNode in="SourceGraphic"/>-->
-            <!--                                        </feMerge>-->
-            <!--                                    </filter>-->
+            <div class="slider__item">
+                <div class="slider__content slider__content--full">
+                    <div class="header">
+                        <div class="header__wrapper quiz">
+                            <svg
+                                    class="pattern"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 345 345">
+                                <defs>
+                                    <filter id="Filter_header" x="-1.5px" y="-1.5px" width="295px"
+                                            height="295px">
+                                        <feOffset in="SourceAlpha" dx="0" dy="0"/>
+                                        <feGaussianBlur result="blurOut" stdDeviation="3"/>
+                                        <feFlood flood-color="rgb(35, 167, 131)" result="floodOut"/>
+                                        <feComposite operator="atop" in="floodOut" in2="blurOut"/>
+                                        <feComponentTransfer>
+                                            <feFuncA class="intensity" type="linear" slope="3"/>
+                                        </feComponentTransfer>
+                                        <feMerge>
+                                            <feMergeNode/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
 
-            <!--                                </defs>-->
-            <!--                                <path fill-rule="evenodd" fill-opacity="0.831" fill="rgb(0, 0, 0)"-->
-            <!--                                      d="M172.500,0.000 C267.769,0.000 345.000,77.231 345.000,172.500 C345.000,267.769-->
-            <!--                                  267.769,345.000 172.500,345.000 C77.231,345.000 0.000,267.769 0.000,172.500 C0.000,77.231-->
-            <!--                                  77.231,0.000 172.500,0.000 Z"/>-->
-            <!--                                <g filter="url(#Filter_header)">-->
-            <!--                                    <path fill-rule="evenodd" stroke="rgb(35, 167, 131)" stroke-width="1px"-->
-            <!--                                          stroke-linecap="butt" stroke-linejoin="miter" fill="none"-->
-            <!--                                          d="M172.500,0.000 C267.769,0.000 345.000,77.231 345.000,172.500 C345.000,267.769-->
-            <!--                                        267.769,345.000 172.500,345.000 C77.231,345.000 0.000,267.769 0.000,172.500 C0.000,77.231-->
-            <!--                                        77.231,0.000 172.500,0.000 Z"/>-->
-            <!--                                </g>-->
-            <!--                            </svg>-->
-            <!--                            <div class="header__content header__content&#45;&#45;line header__content&#45;&#45;oversize">-->
-            <!--                                <img class="header__logo"-->
-            <!--                                     src="assets/image/logoBig.png"-->
-            <!--                                     alt="лого">-->
+                                </defs>
+                                <path fill-rule="evenodd" fill-opacity="0.831" fill="rgb(0, 0, 0)"
+                                      d="M172.500,0.000 C267.769,0.000 345.000,77.231 345.000,172.500 C345.000,267.769
+                                              267.769,345.000 172.500,345.000 C77.231,345.000 0.000,267.769 0.000,172.500 C0.000,77.231
+                                              77.231,0.000 172.500,0.000 Z"/>
+                                <g filter="url(#Filter_header)">
+                                    <path fill-rule="evenodd" stroke="rgb(35, 167, 131)" stroke-width="1px"
+                                          stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                          d="M172.500,0.000 C267.769,0.000 345.000,77.231 345.000,172.500 C345.000,267.769
+                                                    267.769,345.000 172.500,345.000 C77.231,345.000 0.000,267.769 0.000,172.500 C0.000,77.231
+                                                    77.231,0.000 172.500,0.000 Z"/>
+                                </g>
+                            </svg>
+                            <div class="header__content header__content--line header__content--oversize">
+                                <img class="header__logo"
+                                     src="assets/image/logoBig.png"
+                                     alt="лого">
 
-            <!--                                <div class="header__title">-->
-            <!--                                    <svg xmlns="http://www.w3.org/2000/svg"-->
-            <!--                                         xmlns:xlink="http://www.w3.org/1999/xlink"-->
-            <!--                                         viewBox="28 20 905 40" width="100%">-->
-            <!--                                        <defs>-->
-            <!--                                            <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px"-->
-            <!--                                                    width="1012px"-->
-            <!--                                                    height="90px">-->
-            <!--                                                <feOffset in="SourceAlpha" dx="0" dy="3"/>-->
-            <!--                                                <feGaussianBlur result="blurOut" stdDeviation="5.196"/>-->
-            <!--                                                <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"/>-->
-            <!--                                                <feComposite operator="atop" in="floodOut" in2="blurOut"/>-->
-            <!--                                                <feComponentTransfer>-->
-            <!--                                                    <feFuncA type="linear" slope="1"/>-->
-            <!--                                                </feComponentTransfer>-->
-            <!--                                                <feMerge>-->
-            <!--                                                    <feMergeNode/>-->
-            <!--                                                    <feMergeNode in="SourceGraphic"/>-->
-            <!--                                                </feMerge>-->
-            <!--                                            </filter>-->
+                                <div class="header__title">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="28 20 905 40" width="100%">
+                                        <defs>
+                                            <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px"
+                                                    width="1012px"
+                                                    height="90px">
+                                                <feOffset in="SourceAlpha" dx="0" dy="3"/>
+                                                <feGaussianBlur result="blurOut" stdDeviation="5.196"/>
+                                                <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"/>
+                                                <feComposite operator="atop" in="floodOut" in2="blurOut"/>
+                                                <feComponentTransfer>
+                                                    <feFuncA type="linear" slope="1"/>
+                                                </feComponentTransfer>
+                                                <feMerge>
+                                                    <feMergeNode/>
+                                                    <feMergeNode in="SourceGraphic"/>
+                                                </feMerge>
+                                            </filter>
 
-            <!--                                        </defs>-->
-            <!--                                        <g filter="url(#Filter_0)">-->
-            <!--                                            <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)"-->
-            <!--                                                  transform="matrix( 0.79873850827242, 0, 0, 0.79873850827242,26.1986283501603, 51.8025286489518)"-->
-            <!--                                                  font-size="45px">-->
-            <!--                                                <tspan font-size="45px" font-family="Gotham Pro" fill="#FFFFFF">-->
-            <!--                                                    &#1082;&#1086;&#1084;&#1087;&#1083;&#1077;&#1082;&#1089;&#1085;&#1072;&#1103;&#32;&#1091;&#1087;&#1072;&#1082;&#1086;&#1074;&#1082;&#1072;&#32;&#1073;&#1080;&#1079;&#1085;&#1077;&#1089;&#1072;&#32;&#1074;&#32;&#1089;&#1077;&#1090;&#1080;&#32;&#1080;&#1085;&#1090;&#1077;&#1088;&#1085;&#1077;&#1090;-->
-            <!--                                                </tspan>-->
-            <!--                                            </text>-->
-            <!--                                        </g>-->
-            <!--                                    </svg>-->
-            <!--                                </div>-->
-            <!--                            </div>-->
+                                        </defs>
+                                        <g filter="url(#Filter_0)">
+                                            <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)"
+                                                  transform="matrix( 0.79873850827242, 0, 0, 0.79873850827242,26.1986283501603, 51.8025286489518)"
+                                                  font-size="45px">
+                                                <tspan font-size="45px" font-family="Gotham Pro" fill="#FFFFFF">
+                                                    &#1082;&#1086;&#1084;&#1087;&#1083;&#1077;&#1082;&#1089;&#1085;&#1072;&#1103;&#32;&#1091;&#1087;&#1072;&#1082;&#1086;&#1074;&#1082;&#1072;&#32;&#1073;&#1080;&#1079;&#1085;&#1077;&#1089;&#1072;&#32;&#1074;&#32;&#1089;&#1077;&#1090;&#1080;&#32;&#1080;&#1085;&#1090;&#1077;&#1088;&#1085;&#1077;&#1090;
+                                                </tspan>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
 
-            <!--                            <div class="header__content">-->
-            <!--                                <div class="header__description">-->
-            <!--                                    с дизайна и разработки фирменного стиля, до-->
-            <!--                                    разработки и внедрения рекламной компании-->
-            <!--                                </div>-->
-            <!--                                <a href="tel: 79786733845" class="button button&#45;&#45;background&#45;&#45;green">-->
-            <!--                                    <img src="assets/image/icons/phoneEmpty.png" alt="">-->
-            <!--                                </a>-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <img class="slider__background"-->
-            <!--                     src="./assets/image/main.png"-->
-            <!--                     alt="">-->
-            <!--            </div>-->
+                            <div class="header__content">
+                                <div class="header__description">
+                                    с дизайна и разработки фирменного стиля, до
+                                    разработки и внедрения рекламной компании
+                                </div>
+                                <a href="tel: 79786733845" class="button button--background--green">
+                                    <img src="assets/image/icons/phoneEmpty.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="slider__background"
+                     src="./assets/image/main.png"
+                     alt="">
+            </div>
 
             <!-- SLIDE_01 -->
             <div class="slider__item">
@@ -472,16 +472,16 @@
                                     </div>
                                     <div class="quiz__answers-wrapper quiz--col1" data-multiple>
                                         <div class="quiz__answer">
-                                            Дизайн полиграфии
-                                        </div>
-                                        <div class="quiz__answer">
-                                            Дизайн упаковки
+                                            Разработка логотипа
                                         </div>
                                         <div class="quiz__answer">
                                             Разработка фирменного стиля
                                         </div>
                                         <div class="quiz__answer">
-                                            Разработка логотипа
+                                            Дизайн упаковки
+                                        </div>
+                                        <div class="quiz__answer">
+                                            Дизайн полиграфии
                                         </div>
                                     </div>
                                 </div>
@@ -703,7 +703,7 @@
                                             Нет заявок
                                         </div>
                                         <div class="quiz__answer">
-                                            Сарафан/рекомендации
+                                            Сарафан | рекомендации
                                         </div>
                                         <div class="quiz__answer">
                                             Социальные сети
@@ -920,7 +920,7 @@
                                             Нет заявок
                                         </div>
                                         <div class="quiz__answer">
-                                            Сарафан/рекомендации
+                                            Сарафан | рекомендации
                                         </div>
                                         <div class="quiz__answer">
                                             Социальные сети
@@ -1921,7 +1921,7 @@
                                 </div>
                                 <div class="projects__text-wrapper">
                                     <div class="projects__title color--blue">
-                                        Дикая маята
+                                        Дикая мята
                                     </div>
                                     <div class="projects__description">
                                         Разработка логотипа для сети кальянных.
@@ -1953,7 +1953,7 @@
                                 </div>
                                 <div class="projects__text-wrapper">
                                     <div class="projects__title color--red">
-                                        Ветеренарка
+                                        Доктор Иван Забаренко
                                     </div>
                                     <div class="projects__description">
                                         Разработка логотипа для зоо-нейрохирурга.
